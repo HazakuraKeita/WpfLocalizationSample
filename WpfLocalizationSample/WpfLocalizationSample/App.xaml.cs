@@ -22,7 +22,7 @@ namespace WpfLocalizationSample
 
             language = string.IsNullOrEmpty(language) ? "Japanese" : language;
             dictionary.Source = new Uri("/Resources;component/Resources/" + language + ".xaml", UriKind.Relative);
-            Resources.MergedDictionaries.Add(dictionary);
+            Resources.MergedDictionaries[0] = dictionary;
         }
     }
 }
