@@ -1,4 +1,8 @@
-﻿<Application x:Class="Dialogs.App"
+﻿<!--*************************************************
+* 本App.xmlはデザイナー向けであり、
+* 実行時はWpfLocalizationSampl.App.xamlが使用される
+**************************************************-->
+    <Application x:Class="Dialogs.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Dialogs"

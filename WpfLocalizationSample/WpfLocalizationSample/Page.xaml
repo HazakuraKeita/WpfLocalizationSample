@@ -19,9 +19,9 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Content="Dialog" Click="Dialog_Click" Height="50" Margin="20"/>
-            <Button Content="English" Grid.Column="1" Height="50" Margin="20"/>
-            <Button Content="Japanese" Grid.Column="2" Height="50" Margin="20"/>
+            <Button Content="Dialog" Command="{Binding DialogCommand}" Height="50" Margin="20"/>
+            <Button Content="English" Command="{Binding LanguageChangeCommand}" CommandParameter="English" Grid.Column="1" Height="50" Margin="20"/>
+            <Button Content="Japanese" Command="{Binding LanguageChangeCommand}" CommandParameter="Japanese" Grid.Column="2" Height="50" Margin="20"/>
         </Grid>
     </Grid>
 </Page>

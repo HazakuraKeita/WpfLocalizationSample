@@ -25,10 +25,5 @@ namespace WpfLocalizationSample
             InitializeComponent();
             DataContext = new PageViewModel();
         }
-
-        private void Dialog_Click(object sender, RoutedEventArgs e)
-        {
-            new Dialogs.MainWindow().ShowDialog();
-        }
     }
 }
