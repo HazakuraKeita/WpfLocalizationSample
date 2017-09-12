@@ -1,0 +1,27 @@
+﻿<Page x:Class="WpfLocalizationSample.Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfLocalizationSample"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="Page" Background="White">
+
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,90">
+            <TextBlock Text="{StaticResource National}" FontSize="32" HorizontalAlignment="Center"/>
+            <TextBlock Text="{StaticResource Hello}" FontSize="24"/>
+        </StackPanel>
+        <Grid VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Dialog" Click="Dialog_Click" Height="50" Margin="20"/>
+            <Button Content="English" Grid.Column="1" Height="50" Margin="20"/>
+            <Button Content="Japanese" Grid.Column="2" Height="50" Margin="20"/>
+        </Grid>
+    </Grid>
+</Page>
