@@ -25,12 +25,18 @@ namespace WpfLocalizationSample
 
             LanguageChangeCommand = new DelegateCommand((parameter) =>
             {
+                var language = parameter as string;
+                var dictionary = new ResourceDictionary();
                 var configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
-                configuration.AppSettings.Settings["Language"].Value = parameter as string;
+                // Language config setting change
+                configuration.AppSettings.Settings["Language"].Value = language;
                 configuration.Save();
-
-                Application.Current.MainWindow.Close();
+                
+                // Current resource change
+                language = string.IsNullOrEmpty(language) ? "Japanese" : language;
+                dictionary.Source = new Uri("/Resources;component/Resources/" + language + ".xaml", UriKind.Relative);
+                Application.Current.Resources.MergedDictionaries[0] = dictionary;
             });
         }
     }
